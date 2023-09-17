@@ -15,6 +15,7 @@ module.exports = {
       },
     },
     screens: {
+      xs:'400px',
       sm: '640px',
       md: '768px',
       lg: '960px',
@@ -33,12 +34,18 @@ module.exports = {
         site: 'url("/site-bg.svg")',
       },
       animation: {
-        'spin-slow': 'spin 6s linear infinite',
+        'spin-slow': 'spin 15s linear infinite',
+        'opaque':'opaque 2s linear '
       },
       fontFamily: {
-        poppins: [`var(--font-poppins)`, 'sans-serif'],
         sora: [`var(--font-sora)`, 'sans-serif'],
       },
+      keyframes:{
+        opaque:{
+          '0%':{opacity:'0'},
+          '100%':{opacity:'1'}
+        }
+      }
     },
   },
   container: {
