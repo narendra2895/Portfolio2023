@@ -121,14 +121,15 @@ const About = () => {
         learn from them. I am full of energy and always up to meet new people. Brining positive and happy vibes to any room that I enter is a top priority for me.
       </p>
       </div>
-      <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
-        <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+      <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]   ">
+        <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4   ">
           {aboutData.map((item, itemIndex) => {
             return (
               <div key={itemIndex} className={`${index === itemIndex && 'text-accent afteer:w-[100%] after:bg-accent after:transition-all after:duration-300'} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:bottom-1 after:left-0`} onClick={() => setIndex(itemIndex)}> {item.title} </div>
             )
           })}
         </div>
+   
         <div className="xl:text-left text-center  px-2 py-2 xl:py-6 flex flex-col gap-y-8  xl:gap-y-4 items-center xl:items-start rounded-2xl">
           {aboutData[index].info.map((item, itemIndex) => {
             return <div key={itemIndex}>
@@ -148,6 +149,7 @@ const About = () => {
             </div>
           })}
         </div>
+        
       </div>
 
     </div>

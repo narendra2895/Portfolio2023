@@ -41,17 +41,17 @@ const Services = () => {
   };
 
   return (
-    <div className="container  flex xl:flex-row flex-col justify-center items-center xl:items-start py-52 mx-auto">
+    <div className="container  flex xl:flex-row flex-col justify-center items-center xl:items-start py-52 mx-auto h-full">
       <Circles />
       <div className=" animate-pulse duration-75 z-10 md:block hidden">
         <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
       </div>
-      <div className="basis-1/2" >
+      <div className="basis-1/2 mx-auto" >
         <h1 className="h1">My Services <span className="text-accent">.</span></h1>
         <p>I have a good understanding of colors and design and love to create websites. </p>
       </div>
 
-      <div className="basis-1/2">
+      <div className="basis-1/2 mx-auto">
         <Swiper
           slidesPerView='auto'
           centeredSlides={true}
@@ -68,21 +68,22 @@ const Services = () => {
             <SwiperSlide key={item.id} >
 
               <h3 className=" text-center text-3xl ">{item.name}</h3>
+              <p className="animate-opaque">{item.detail}</p>
 
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <div className="serviceDesc p-130 h-full">
+        {/* <div className="serviceDesc mt-5 lg:mt-10  ">
           {servicesData.map((item, index) => (
             <div
-              className={`descItem ${index === activeSlideIndex ? 'flex' : 'hidden'} text-center  animate-opaque`}
+              className={`descItem ${index === activeSlideIndex ? 'block' : 'hidden'} text-center  animate-opaque`}
               key={item.id}
             >
               <p>{item.detail}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
