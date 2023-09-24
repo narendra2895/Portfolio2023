@@ -109,7 +109,7 @@ const Contact = () => {
         <h1 className="h1 text-center font-semibold mb-4">Reach Me to <span className='text-accent'>Hire Me.</span></h1>
         <form className='text-black flex xl:gap-x-10'>
           <motion.div variants={fadeIn('right', 0.3)} initial="hidden" animate="show" exit="hidden" className='h-full '>
-            <Image src={'/contact-avatar.png'} width={400} height={400} alt="avatar" className='translate-z-0 hidden xl:block rounded-3xl' />
+            <Image src={'images/contact-avatar.png'} width={400} height={400} alt="avatar" className='translate-z-0 hidden xl:block rounded-3xl' />
           </motion.div>
           <div className='xl:w-[800px] w-full'>
             <motion.div variants={fadeIn('left', 0.3)} initial="hidden" animate="show" exit="hidden" className="mb-4">
