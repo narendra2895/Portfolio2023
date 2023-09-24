@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from 'swiper';
-import 'swiper/css';
+import { Autoplay, Pagination } from 'swiper';
+import 'swiper/swiper-bundle.min.css';
+
 
 
 const projectData = [
@@ -39,12 +40,12 @@ const projectData = [
 
 const Work = () => {
   return (
-    <div className="container py-52 mx-auto">
+    <div className="container pt-52 mx-auto">
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <h1 className="h1 basis-1/2"> My <span className="text-accent">Work.</span></h1>
         <Swiper
           className="basis-1/2 mySwiper"
-          slidesPerView='auto'
+          slidesPerView={'auto'}
           centeredSlides={true}
           loop={true}
           autoplay={{
@@ -52,19 +53,15 @@ const Work = () => {
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
-
-
+         
         >
           {projectData.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="flex flex-col items-center justify-center " >
-
-                <Image src={item.image} height={300} width={350} alt="image" className="rounded-xl h-[200px] w-[250px] mxs-auto" />
-
+            <SwiperSlide key={item.id} className="h-100">
+              <div className="" >
+                <Image src={item.image} height={300} width={350} alt="image" className="rounded-xl h-[200px] w-[250px]" />
                 <a href={item.link} target="blank"><p className="text-2xl">{item.name}</p></a>
-                <p className="hidden lg:block">{item.desc}</p>
+                <p >{item.desc}</p>
               </div>
-
             </SwiperSlide>
           ))}
 
