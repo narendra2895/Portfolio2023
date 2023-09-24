@@ -108,7 +108,7 @@ const About = () => {
   console.log(index)
 
 
-  return (<div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+  return (<div className="h-full bg-primary/30 pt-32 text-center xl:text-left">
     <Circles />
     {/* {avatar image} */}
     <motion.div variants={fadeIn('right', 1.5)} initial="hidden" animate="show" exit="hidden" className="hidden  lg:flex xl:flex absolute bottom-[-50px] lg:bottom-[-50px] md:bottom-[65px] -left-[104px] md:w-[450px] md:h-[330px] w-[550px] h-[465px] lg:w-[550px] lg:h-[465px]">
@@ -130,7 +130,7 @@ const About = () => {
           })}
         </div>
    
-        <div className="xl:text-left text-center  px-2 py-2 xl:py-6 flex flex-col gap-y-8  xl:gap-y-4 items-center xl:items-start rounded-2xl custom-scroll xl:overflow-hidden h-[150px] md:h-[250px] xl:h-full">
+        <div className="xl:text-left text-center  px-2 py-2 xl:py-2 flex flex-col gap-y-8  xl:gap-y-4 items-center xl:items-start rounded-2xl custom-scroll xl:overflow-visible  h-[150px] md:h-[250px] xl:h-full">
           {aboutData[index].info.map((item, itemIndex) => {
             return <div key={itemIndex}>
               <div>{item.title}</div>
