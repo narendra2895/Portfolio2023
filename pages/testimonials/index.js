@@ -102,7 +102,7 @@ const Testimonials = () => {
                 initial="hidden"
                 animate={index === currentSlideIndex ? "show" : "hidden"}
                 exit="hidden"
-                className="py-3 text-lg"
+                className="py-3 text-lg custom-scroll h-[150px] md:h-100"
               >
                 {item.content}
               </motion.p>

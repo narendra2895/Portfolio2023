@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Circles from "../../components/Circles";
-import { Autoplay } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import Image from "next/image";
 
 import { FaPaperPlane, FaDragon } from "react-icons/fa";
@@ -33,59 +33,42 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-
-  const handleSlideChange = (swiper) => {
-    setActiveSlideIndex(swiper.realIndex);
-    console.log(swiper.realIndex)
-  };
 
   return (
-    <div className="container  flex xl:flex-row flex-col justify-center items-center xl:items-start py-52 mx-auto h-full">
+    <div className="container  flex flex-col gap-3 justify-center items-center xl:items-start  pt-0  mx-auto h-full">
       <Circles />
-      <div className=" animate-pulse duration-75 z-10 md:block hidden">
+      <div className=" animate-pulse duration-75 z-10 lg:block hidden">
         <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
       </div>
-      <div className="basis-1/2 mx-auto" >
-        <h1 className="h1">My Services <span className="text-accent">.</span></h1>
+      <div className="" >
+        <h1 className="h1 mb-1 lg:mb-2">My Services <span className="text-accent">.</span></h1>
         <p>I have a good understanding of colors and design and love to create websites. </p>
       </div>
-
-      <div className="basis-1/2 mx-auto">
+      <div className="">
         <Swiper
-          slidesPerView='auto'
+          className="mySwiper "
+          slidesPerView={'auto'}
           centeredSlides={true}
           loop={true}
           autoplay={{
             delay: 10000,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay]}
-          className="mySwiper"
-          onSlideChange={(swiper) => handleSlideChange(swiper)}
+          modules={[Autoplay,Pagination]}
+          pagination={{ clickable: true }} // Configure pagination
         >
-          {servicesData.map((item) => (
-            <SwiperSlide key={item.id} >
-
-              <h3 className=" text-center text-3xl ">{item.name}</h3>
-              <p className="animate-opaque">{item.detail}</p>
-
+          {servicesData.map((item)=>(
+            <SwiperSlide key={item.id} className="text-center h-100">
+              <h2>{item.name}</h2>
+              <p className="">  {item.detail}</p>
             </SwiperSlide>
           ))}
-        </Swiper>
 
-        {/* <div className="serviceDesc mt-5 lg:mt-10  ">
-          {servicesData.map((item, index) => (
-            <div
-              className={`descItem ${index === activeSlideIndex ? 'block' : 'hidden'} text-center  animate-opaque`}
-              key={item.id}
-            >
-              <p>{item.detail}</p>
-            </div>
-          ))}
-        </div> */}
+        </Swiper>
       </div>
+
     </div>
+
   );
 };
 
