@@ -4,5 +4,11 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  ...nextConfig,
 
+   // Add the images configuration
+   images: {
+    domains: ['res.cloudinary.com'], // Add the Cloudinary hostname here
+  },
+}
