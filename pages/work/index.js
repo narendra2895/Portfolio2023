@@ -44,7 +44,7 @@ const Work = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <div className="basis-1/2">
           <h1 className="h1 basis-1/2"> My <span className="text-accent">Work.</span></h1>
-          <p className="xl:block hidden">During my tenure at 3Minds Digital, I successfully led the development of a WordPress microsite for "Gulf AdBlue India," managing both frontend and backend components and maintaining close client collaboration. Additionally, I engineered a cost-effective store locator application using the Google Maps Platform, optimizing API calls for efficiency. My portfolio includes diverse JavaScript projects and an interactive 3D box modal created with Three.js, demonstrating my commitment to web development and innovation.</p>
+          <p className="xl:block hidden">During my tenure at 3Minds Digital, I successfully led the development of a WordPress microsite for Gulf AdBlue India, managing both frontend and backend components and maintaining close client collaboration. Additionally, I engineered a cost-effective store locator application using the Google Maps Platform, optimizing API calls for efficiency. My portfolio includes diverse JavaScript projects and an interactive 3D box modal created with Three.js, demonstrating my commitment to web development and innovation.</p>
         </div>
         <Swiper
           className="basis-1/2 mySwiper"
