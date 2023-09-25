@@ -130,10 +130,10 @@ const Contact = () => {
       ) : (
       <div id="contact-form" className="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-opacity-60 bg-black p-8 rounded-2xl ">
         <h1 className="h1 text-center font-semibold mb-4">Reach Me to <span className='text-accent'>Hire Me.</span></h1>
-        <form className='text-black flex xl:gap-x-10' onSubmit={sendEmail}>
-          <motion.div variants={fadeIn('right', 0.3)} initial="hidden" animate="show" exit="hidden" className='h-full '>
+        <form className='text-black flex justify-center items-center xl:gap-x-10' onSubmit={sendEmail}>
+          {/* <motion.div variants={fadeIn('right', 0.3)} initial="hidden" animate="show" exit="hidden" className='h-full '>
             <Image src='https://res.cloudinary.com/dldblks5t/image/upload/v1695221254/public/contact-avatar_jiw8wa.png' height={400} width={400}  alt="avatar" className='translate-z-0 hidden xl:block rounded-3xl' />
-          </motion.div>
+          </motion.div> */}
           <div className='xl:w-[800px] w-full'>
             <motion.div variants={fadeIn('left', 0.3)} initial="hidden" animate="show" exit="hidden" className="mb-4">
               <label htmlFor="name" className="block font-medium text-white">Name:</label>
