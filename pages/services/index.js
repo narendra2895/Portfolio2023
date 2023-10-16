@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 import Circles from "../../components/Circles";
-import { Autoplay, Pagination } from 'swiper';
+import { Autoplay } from 'swiper';
 import Image from "next/image";
 
 import { FaPaperPlane, FaDragon } from "react-icons/fa";
@@ -35,7 +35,7 @@ const servicesData = [
 const Services = () => {
 
   return (
-    <div className="container flex flex-col gap-10 justify-center  items-center xl:items-start pt-0  mx-auto h-full">
+    <div className="container flex flex-col gap-10 xl:pt-40 items-center xl:items-start pt-0  mx-auto h-full">
       <Circles />
       <div className=" animate-pulse duration-75 z-10 lg:block hidden">
         <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
@@ -54,8 +54,7 @@ const Services = () => {
             delay: 10000,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay,Pagination]}
-          pagination={{ clickable: true }} // Configure pagination
+          modules={[Autoplay]}
         >
           {servicesData.map((item)=>(
             <SwiperSlide key={item.id} className="text-center">
