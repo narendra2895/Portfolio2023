@@ -28,48 +28,49 @@ const servicesData = [
   {
     id: '3',
     name: 'Logo or Brand Design',
-    detail: '4Lorem ipsum dolor sit, amet consectetur adipisicing elit...'
+    detail: 'I have designed a lot of UI screens for a variety of projects that I have worked on, Society Pro, Gulf AdBlue, Harleens Nail N Spa are to name a few'
   },
 ];
 
 const Services = () => {
 
   return (
-    <div className="container flex flex-col gap-10 xl:pt-40 items-center xl:items-start pt-0  mx-auto h-full">
-      <Circles />
-      <div className=" animate-pulse duration-75 z-10 lg:block hidden">
-        <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
-      </div>
-      <div >
-        <h1 className="h1 mb-1 lg:mb-2">My Services <span className="text-accent">.</span></h1>
-        <p>I have a good understanding of colors and design and love to create websites. </p>
-      </div>
-      <div className="">
-        <Swiper
-          className="mySwiper "
-          slidesPerView={'auto'}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 10000,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay]}
-        >
-          {servicesData.map((item)=>(
-            <SwiperSlide key={item.id} className="text-center">
-              <div>
-              <h2>{item.name}</h2>
-              <p> {item.detail}</p>
-              </div>
-            </SwiperSlide>
-          ))}
+    <div className='container pt-52 mx-auto'>
+      <div className="container flex flex-col gap-10 xl:pt-40 items-center xl:items-start pt-0  mx-auto h-full">
+        <Circles />
+        <div className=" animate-pulse duration-75 z-10 lg:block hidden">
+          <Image src={'/bulb.png'} height={350} width={220} className="absolute bottom-[50px] -left-[100px]" alt="bottom-image " />
+        </div>
+        <div >
+          <h1 className="h1 mb-1 lg:mb-2">My Services <span className="text-accent">.</span></h1>
+          <p>I have a good understanding of colors and design and love to create websites. </p>
+        </div>
+        
+          <Swiper
+            className="mySwiper "
+            slidesPerView={'auto'}
+            centeredSlides={true}
+            loop={true}
+            // autoplay={{
+            //   delay: 10000,
+            //   disableOnInteraction: false,
+            // }}
+            modules={[Autoplay]}
+          >
+            {servicesData.map((item) => (
+              <SwiperSlide key={item.id} className="text-center">
+              
+                  <h2>{item.name}</h2>
+                  <p > {item.detail}</p>
+                
+              </SwiperSlide>
+            ))}
 
-        </Swiper>
-      </div>
+          </Swiper>
+        
 
+      </div>
     </div>
-
   );
 };
 

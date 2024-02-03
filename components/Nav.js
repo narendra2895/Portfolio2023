@@ -6,6 +6,7 @@ import {
   HiRectangleGroup,
   HiChatBubbleBottomCenterText,
   HiEnvelope,
+  HiPresentationChartBar
 } from 'react-icons/hi2';
 
 // nav data
@@ -14,16 +15,23 @@ export const navData = [
   { name: 'about', path: '/about', icon: <HiUser /> },
   { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
-  {
-    name: 'testimonials',
-    path: '/testimonials',
-    icon: <HiChatBubbleBottomCenterText />,
-  },
+  // {
+  //   name: 'testimonials',
+  //   path: '/testimonials',
+  //   icon: <HiChatBubbleBottomCenterText />,
+  // },
+  // {
+  //   name: 'projects',
+  //   path: '/projects',
+  //   icon: <HiPresentationChartBar />,
+  // },
   {
     name: 'contact',
     path: '/contact',
     icon: <HiEnvelope />,
   },
+  // { name: 'project1', path: '/projects/Calculator', icon: <HiPresentationChartBar /> },
+  // { name: 'project2', path: '/projects/project2', icon: <HiPresentationChartBar /> },
 ];
 
 //nav-link
